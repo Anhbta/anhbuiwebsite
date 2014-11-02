@@ -1,0 +1,27 @@
+application: anhbuiwebsite
+version: 2
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /css
+  static_dir: css
+- url: /js
+  static_dir: js
+- url: /img
+  static_dir: img
+- url: /fonts
+  static_dir: fonts
+- url: /font-awesome-4.1.0
+  static_dir: font-awesome-4.1.0
+
+
+- url: /.*
+  script: mywebsite.application
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
